@@ -6,7 +6,7 @@ A Tableau dashboard exploring NHL Draft data to look at trends in player selecti
 
 ## Overview
 
-Not every NHL draft pick makes it. Most don't, actually. I wanted to dig into the data and see what patterns show up — does draft position really matter? Which countries are most represented? Are there draft classes that turned out way better than others?
+Not every NHL draft pick makes it. Most don't, actually. I wanted to dig into the data and see what patterns show up. Does draft position really matter? Which countries are most represented? Are there draft classes that turned out way better than others?
 
 This project goes from raw draft data all the way to an interactive Tableau dashboard that lets you filter and explore those questions yourself.
 
