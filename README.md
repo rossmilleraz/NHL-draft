@@ -1,68 +1,67 @@
-# NHL Draft Analytics Dashboard
-
-A Tableau dashboard exploring NHL Draft data to look at trends in player selection, draft success, and where players come from. I built this because I wanted to work with real sports data and practice turning a messy dataset into something actually usable.
-
----
+# NHL Draft Analysis Dashboard
 
 ## Overview
 
-Not every NHL draft pick makes it. Most don't, actually. I wanted to dig into the data and see what patterns show up. Does draft position really matter? Which countries are most represented? Are there draft classes that turned out way better than others?
+Not every first-round pick makes it, and some of the best NHL players were taken in the fourth round or later. I wanted to see if the data actually backed that up, and what other patterns show up when you look at decades of draft history all at once.
 
-This project goes from raw draft data all the way to an interactive Tableau dashboard that lets you filter and explore those questions yourself.
-
----
-
-## The Questions
-
-- How does draft position relate to NHL career length?
-- Which countries produce the most picks?
-- How many drafted players never stick in the NHL?
-- Are certain rounds more hit-or-miss than others?
+This project uses SQL and Python to clean and prep the data, then brings it into Tableau as an interactive dashboard you can filter by draft year, country, position, and round.
 
 ---
 
-## The Dataset
+## The Questions I Looked At
 
-The data includes draft year, draft position, team, player name, position, height, weight, nationality, career games played, and career points.
+**Does draft position actually matter?**
+Pretty much yes — earlier picks tend to play more games and put up more points over their careers. But it's not a clean line. There are first-rounders who flame out and sixth-rounders who play 1,000 games. That's what makes the draft interesting.
+
+**Which rounds produce the most value?**
+The first round is the most reliable, but every round has produced legit NHL players. The drop-off is real, but it's not like rounds 4-7 are a wasteland either.
+
+**Where do most NHL players come from?**
+Canada and the US make up the biggest share, but Sweden, Finland, Russia, and Czechia all show up consistently. Hockey talent is pretty concentrated geographically, but it's not exclusively North American.
+
+**Does position matter for predicting success?**
+Forwards get drafted the most and make up most of the career production numbers. Goalies are the trickiest to evaluate — they develop later and the sample sizes get weird. I kept that in mind when looking at success rates by position.
 
 ---
 
-## Data Cleaning
+## What I Actually Did
 
-The data needed a fair amount of work before it was ready to visualize. I removed duplicates, standardized country names, fixed data types, handled missing values, and merged the draft info with career stats. Nothing glamorous, but it's most of what the work actually was.
+The raw data needed a lot of cleanup before it was usable — inconsistent country names, missing values, data types that were wrong, and draft records that didn't match up cleanly with career stats. I used SQL and Python (pandas) to sort all of that out before touching Tableau.
 
----
-
-## The Dashboard
-
-The finished dashboard in Tableau includes:
-
-- KPI cards for total players drafted, average career games, average points, and draft success rate
-- A scatter plot of draft position vs career games played
-- A breakdown of picks by country
-- Career success by draft round
-- Filters for draft year, country, position, and round
+From there I built the dashboard with filters for draft year, nationality, position, and round, plus KPI cards showing overall draft numbers and career averages.
 
 ---
 
 ## What I Found
 
-A few things stood out. Canada produces the most picks by a wide margin, with the US and Sweden behind it. First round picks are more likely to have long careers, but there's still a real drop-off even within the first round — it's not as clean as you'd expect. And every single draft class has a big chunk of players who never really establish themselves in the NHL, which I knew anecdotally but it's different seeing it laid out across every year.
+The biggest thing that stood out: every single draft class has a huge chunk of players who never really stick in the NHL. That's something everyone in hockey knows, but seeing it laid out across every year in the data makes it more concrete. It's not a fluke — it's just how the draft works.
 
+The country breakdown was also interesting. Canada dominates the raw numbers, but when you look at success rates by country the gap narrows a bit. Some of the European nations punch above their weight relative to how many picks they produce.
+
+---
+<!--
+## Dashboard Screenshots
+
+### Main Dashboard
+![Main Dashboard](screenshots/dashboard.png)
+
+### Draft Position Analysis
+![Draft Position Analysis](screenshots/draft-position.png)
+
+### Nationality Breakdown
+![Nationality Breakdown](screenshots/nationality.png)
+
+### Career Performance
+![Career Performance](screenshots/career-performance.png)
+-->
 ---
 
 ## Tools Used
 
-Python (pandas), Tableau, GitHub
+SQL, PostgreSQL, Python (pandas), Tableau, GitHub
 
 ---
 
-## Dashboard Preview
+## Why I Built This
 
-*(Screenshots coming soon)*
-
----
-
-## What I Learned
-
-This was my first time working with sports data end to end. The cleaning took longer than I expected — country names alone were a mess. I also got a lot more comfortable in Tableau, especially building dashboards that answer a specific question rather than just throwing charts on a page.
+I'm learning data analytics and wanted a project that used SQL, Python, and Tableau together on something I actually find interesting. Sports data is messy in realistic ways, so it was good practice for cleaning and prepping data before jumping into visualization. It also pushed me to think about what question I was actually trying to answer instead of just making charts.
