@@ -1,3 +1,5 @@
+-- Cleans and standardizes the raw data for analysis.
+
 -- Clean text columns
 UPDATE nhl_draft
 SET

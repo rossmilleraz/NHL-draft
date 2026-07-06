@@ -1,3 +1,5 @@
+-- Creates reusable SQL views used throughout the analysis.
+
 CREATE OR REPLACE VIEW vw_tableau_main AS
 SELECT
     id,

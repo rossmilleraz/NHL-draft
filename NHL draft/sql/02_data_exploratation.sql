@@ -1,3 +1,5 @@
+-- Initial exploration of the dataset to identify missing values, duplicates, and overall data quality.
+
 -- Total rows
 SELECT COUNT(*) AS total_rows
 FROM nhl_draft;

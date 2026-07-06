@@ -1,3 +1,5 @@
+-- SQL queries used to answer the project's business questions.
+
 -- 1. Which draft ranges produce the most value?
 
 SELECT

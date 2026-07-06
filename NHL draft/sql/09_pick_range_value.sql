@@ -1,3 +1,5 @@
+-- Creates the aggregated draft range view used in the dashboard.
+
 CREATE OR REPLACE VIEW vw_pick_range_value AS
 
 SELECT

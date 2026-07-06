@@ -1,3 +1,5 @@
+-- Creates the database table and imports the raw NHL draft dataset.
+
 DROP VIEW IF EXISTS vw_draft_pick_value;
 DROP VIEW IF EXISTS vw_team_draft_performance;
 DROP VIEW IF EXISTS vw_nationality_performance;

@@ -1,3 +1,5 @@
+-- Creates derived columns including career tiers and success indicators.
+
 ALTER TABLE nhl_draft
 ADD COLUMN IF NOT EXISTS career_tier VARCHAR(30);
 

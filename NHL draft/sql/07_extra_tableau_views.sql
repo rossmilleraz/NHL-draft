@@ -1,3 +1,5 @@
+-- Additional views created specifically for Tableau visualizations.
+
 -- 1. Career tier distribution
 CREATE OR REPLACE VIEW vw_career_tier_distribution AS
 SELECT
